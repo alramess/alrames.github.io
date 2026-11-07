@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>عبدالله آل رامس</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="عبدالله آل رامس، معلّق صوتي لجهات حكومية وصحية وتعليمية. استمع إلى أعماله وتواصل مباشرة عبر واتساب.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div dir="rtl" lang="ar" data-page="home">
+  <nav class="top" aria-label="التنقل">
+    <div class="wrap">
+      <a class="brand" href="#top">عبدالله آل رامس</a>
+      <div class="links"><a href="#featured">أبرز الأعمال</a><a href="works.html">أعمال أخرى</a><a href="#clients">الجهات</a><a href="#process">طريقة العمل</a><a href="#contact">تواصل</a></div>
+      <a class="btn btn-sm btn-solid js-wa" href="#contact">راسلني على واتساب</a>
+    </div>
+  </nav>
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <p class="role"><span class="lamp" id="lamp"><i></i>على الهواء</span>معلّق صوتي</p>
+        <h1>عبدالله<br>آل رامس</h1>
+        <p class="lede">صوت الأفلام التعريفية للجهات الحكومية والصحية والتعليمية. علّقت لوزارة التعليم وإمارة منطقة الباحة وهيئة تطوير منطقة عسير ومستشفى الملك فهد التخصصي وجامعات المملكة.</p>
+        <div class="actions">
+          <button class="btn btn-solid" id="hero-play" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>
+            استمع الآن
+          </button>
+          <a class="btn js-wa" href="#contact">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+            تواصل عبر واتساب
+          </a>
+        </div>
+      </div>
+
+      <div class="stage" id="stage" aria-label="مشغّل الأعمال">
+        <div class="screen">
+          <video id="player" playsinline preload="metadata"></video>
+          <button class="big-play" id="big-play" type="button" aria-label="تشغيل">
+            <svg viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>
+          </button>
+        </div>
+        <div class="now">
+          <h3 id="now-title"></h3>
+          <span class="cat" id="now-cat"><i></i><span></span></span>
+        </div>
+        <div class="deck">
+          <button class="icon-btn" id="prev" type="button" aria-label="العمل السابق"><svg viewBox="0 0 24 24"><path d="M18 5v14l-9-7zM6 5h2v14H6z"/></svg></button>
+          <button class="icon-btn main" id="toggle" type="button" aria-label="تشغيل"><svg viewBox="0 0 24 24" id="toggle-icon"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></button>
+          <button class="icon-btn" id="next" type="button" aria-label="العمل التالي"><svg viewBox="0 0 24 24"><path d="M6 5v14l9-7zM16 5h2v14h-2z"/></svg></button>
+          <div class="scrub" id="scrub" role="slider" tabindex="0" aria-label="موضع التشغيل" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+          <span class="time" id="time">0:00 / 0:00</span>
+          <button class="icon-btn" id="mute" type="button" aria-label="كتم الصوت"><svg viewBox="0 0 24 24" id="mute-icon"><path d="M4 9v6h4l5 4V5L8 9zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>
+          <button class="icon-btn" id="fs" type="button" aria-label="ملء الشاشة"><svg viewBox="0 0 24 24"><path d="M4 4h6v2H6v4H4zm10 0h6v6h-2V6h-4zM4 14h2v4h4v2H4zm14 0h2v6h-6v-2h4z"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="qatt" role="presentation"></div>
+
+  <main>
+    <section id="featured" class="wrap">
+      <div class="head">
+        <div>
+          <h2>أبرز الأعمال</h2>
+          <p class="sub">اختر أي جهة ليُعرض عملها في المشغّل أعلى الصفحة.</p>
+        </div>
+      </div>
+      <ol class="roster" id="roster"></ol>
+    </section>
+
+    <section class="more-band" aria-labelledby="more-title">
+      <div class="wrap more-inner">
+        <div>
+          <h2 id="more-title"><span id="more-count"></span></h2>
+          <p>أعمال لجمعيات خيرية وجهات مجتمعية، وإعلانات تجارية، ومبادرات ومحتوى توعوي.</p>
+          <ul class="cats-inline" id="more-cats"></ul>
+          <a class="btn btn-solid" href="works.html">شاهد كل الأعمال الأخرى (<span id="more-btn-count"></span>)</a>
+        </div>
+        <div class="fan" id="fan"></div>
+      </div>
+    </section>
+
+    <section id="clients" class="wrap">
+      <div class="head"><h2>جهات عملت معها</h2></div>
+      <ul class="wall">
+        <li>وزارة التعليم</li>
+        <li>إمارة منطقة الباحة</li>
+        <li>هيئة تطوير منطقة عسير</li>
+        <li>مستشفى الملك فهد التخصصي</li>
+        <li>قاعدة الملك خالد الجوية</li>
+        <li>جامعة جدة</li>
+        <li>جامعة نجران</li>
+        <li>إدارة تعليم النماص</li>
+        <li>الكلية التقنية بنجران</li>
+        <li>الكلية التقنية بأبها</li>
+      </ul>
+      <p class="wall-note">إضافة إلى جمعيات خيرية وجهات مجتمعية وشركات من القطاع الخاص.</p>
+    </section>
+
+    <section id="process" class="clients">
+      <div class="wrap">
+        <div class="head"><h2>طريقة العمل</h2></div>
+        <ol class="steps steps-row">
+          <li><span class="n">١</span><div><h3>أرسل النص</h3><p>أرسل النص عبر واتساب مع نوع العمل والنبرة التي تناسب جمهورك.</p></div></li>
+          <li><span class="n">٢</span><div><h3>أسجّل التعليق</h3><p>أسجّل التعليق وأرسله لك بجودة جاهزة للمونتاج.</p></div></li>
+          <li><span class="n">٣</span><div><h3>نعدّل حتى يكتمل</h3><p>أعدّل بحسب ملاحظاتك حتى يصبح العمل جاهزًا للنشر.</p></div></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <div class="qatt" role="presentation"></div>
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>عندك نص يحتاج صوت؟</h2>
+      <p class="sub">راسلني على واتساب وأرد عليك بالتفاصيل.</p>
+      <p class="number" id="number"></p>
+      <div class="actions">
+        <a class="btn btn-solid js-wa" href="#contact">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+          راسلني على واتساب
+        </a>
+        <button class="btn" id="copy" type="button">نسخ الرقم</button>
+      </div>
+      <p class="copied" id="copied" aria-live="polite"></p>
+    </div>
+  </section>
+  <footer>
+    <div class="wrap"><span>© <span id="year"></span> عبدالله آل رامس</span><span>معلّق صوتي</span></div>
+  </footer>
+  <a class="fab js-wa" href="#contact" target="_blank" rel="noopener" aria-label="راسلني على واتساب">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+  </a>
+</div>
+<script src="assets/data.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
